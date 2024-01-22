@@ -6,10 +6,10 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = function() {
-  excuse();
+  excuseGenerator();
 };
 
-function excuse() {
+function excuseGenerator() {
   let who = ["The dog", "My grandma", "His turtle", "My bird"];
   let action = ["ate", "peed", "crushed", "broke"];
   let what = ["my homework", "the keys", "the car"];
@@ -20,15 +20,15 @@ function excuse() {
     "during my lunch",
     "while I was praying"
   ];
-  let whotext = textgenerator(who);
-  let actiontext = textgenerator(action);
-  let whattext = textgenerator(what);
-  let whentext = textgenerator(when);
-  console.log(whotext, actiontext, whattext, whentext);
+  let whoText = textGenerator(who);
+  let actionText = textGenerator(action);
+  let whatText = textGenerator(what);
+  let whenText = textGenerator(when);
+  console.log(whoText, actionText, whatText, whenText);
   document.getElementById("excuse").innerHTML =
-    whotext + " " + actiontext + " " + whattext + " " + whentext;
+    whoText + " " + actionText + " " + whatText + " " + whenText;
 }
 
-function textgenerator(random) {
+function textGenerator(random) {
   return random[Math.floor(Math.random() * random.length)];
 }
